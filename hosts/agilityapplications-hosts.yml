@@ -1,0 +1,65 @@
+generated: '2026-10-25'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 3
+  other_domain: 2
+  platform: 0
+  roles:
+  - api
+  - other
+  - support
+  - website
+hosts:
+- host: agilityapplications.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  serves: []
+  registrable_domain: agilityapplications.com
+  role: website
+  relation: own
+- host: api.agilityapplications.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: agilityapplications.com
+  role: api
+  relation: own
+- host: api.com.au
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.com.au
+  role: api
+  relation: other-domain
+- host: support.agilityapplications.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: agilityapplications.com
+  role: support
+  relation: own
+- host: www.hub24.com.au
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: hub24.com.au
+  role: other
+  relation: other-domain
